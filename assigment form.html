@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	<form>
+	<label> Name:</label><input type="text" name="name" id="Name"><br><br>
+
+	
+	Gender:
+	Male<input type="radio" name="status" >
+	Female:<input type="radio" name="status" ><br><br>
+
+
+
+	Select City:
+	<select id="city">
+		<option>Airoli</option>
+		<option>Thane</option>
+		<option>Rable</option>
+		<option>Vashi</option>
+
+	</select><br><br>
+	<button type="button" id="btn" onclick="data()">submit</button>
+
+
+	</form>
+	<script type="text/javascript">
+		function data()
+		{
+		var name;
+		var city;
+		name=document.getElementById("Name").value;
+		city=document.getElementById("city").value;
+		localStorage.setItem("name",name);
+		localStorage.setItem("city",city);
+	}
+
+
+		
+	</script>
+
+
+</body>
+</html>
